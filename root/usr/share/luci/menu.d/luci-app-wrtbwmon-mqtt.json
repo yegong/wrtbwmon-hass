@@ -1,0 +1,13 @@
+{
+	"admin/services/wrtbwmon-mqtt": {
+		"title": "wrtbwmon for Home Assistant",
+		"order": 80,
+		"action": {
+			"type": "view",
+			"path": "wrtbwmon-mqtt/config"
+		},
+		"depends": {
+			"acl": [ "luci-app-wrtbwmon-mqtt" ]
+		}
+	}
+}

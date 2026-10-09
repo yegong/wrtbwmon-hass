@@ -1,0 +1,12 @@
+#!/bin/sh
+
+[ -s "${IPKG_INSTROOT:-}/lib/functions.sh" ] || exit 0
+. "${IPKG_INSTROOT:-}/lib/functions.sh"
+
+if [ -z "${IPKG_INSTROOT:-}" ] && [ "${PKG_UPGRADE:-0}" != "1" ]; then
+	/etc/init.d/wrtbwmon-mqtt stop >/dev/null 2>&1 || true
+	/usr/bin/wrtbwmon-mqtt --cleanup || true
+fi
+
+default_prerm "$0" "$@"
+exit 0

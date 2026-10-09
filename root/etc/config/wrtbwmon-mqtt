@@ -1,0 +1,4 @@
+config mqtt 'main'
+	option host ''
+	option username ''
+	option password ''

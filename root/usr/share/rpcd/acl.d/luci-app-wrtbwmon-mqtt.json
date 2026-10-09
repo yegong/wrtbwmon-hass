@@ -1,0 +1,11 @@
+{
+	"luci-app-wrtbwmon-mqtt": {
+		"description": "Manage the wrtbwmon MQTT bridge configuration",
+		"read": {
+			"uci": [ "wrtbwmon-mqtt" ]
+		},
+		"write": {
+			"uci": [ "wrtbwmon-mqtt" ]
+		}
+	}
+}

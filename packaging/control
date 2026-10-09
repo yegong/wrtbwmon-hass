@@ -1,0 +1,10 @@
+Package: wrtbwmon-hass
+Version: @VERSION@-r@RELEASE@
+Architecture: all
+Section: net
+Priority: optional
+Depends: wrtbwmon, python3, python3-paho-mqtt, luci-base
+Installed-Size: @INSTALLED_SIZE@
+Description: Home Assistant integration for wrtbwmon
+ Publishes selected wrtbwmon traffic records through MQTT Discovery and
+ creates Home Assistant traffic sensors through a LuCI-managed service.

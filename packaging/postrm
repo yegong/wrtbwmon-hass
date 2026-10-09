@@ -1,0 +1,12 @@
+#!/bin/sh
+
+if [ -z "${IPKG_INSTROOT:-}" ]; then
+	if [ "${PKG_UPGRADE:-0}" != "1" ]; then
+		rm -f /etc/wrtbwmon-mqtt/published.json
+		rmdir /etc/wrtbwmon-mqtt >/dev/null 2>&1 || true
+	fi
+	/etc/init.d/rpcd reload >/dev/null 2>&1 || true
+	/etc/init.d/uhttpd reload >/dev/null 2>&1 || true
+fi
+
+exit 0
